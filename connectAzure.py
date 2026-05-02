@@ -4,9 +4,10 @@ from openai import OpenAI
 
 load_dotenv()
 
-endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://genaiserviceforrag.services.ai.azure.com/openai/v1")
-deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-oss-120b")
-api_key = os.getenv("AZURE_OPENAI_API_KEY")
+endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
+deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+api_key =os.getenv("AZURE_OPENAI_API_KEY")  
+
 
 if not api_key:
     raise ValueError("AZURE_OPENAI_API_KEY environment variable is not set")
