@@ -1,5 +1,8 @@
 import os
+from dotenv import load_dotenv
 from openai import OpenAI
+
+load_dotenv()
 
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://genaiserviceforrag.services.ai.azure.com/openai/v1")
 deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-oss-120b")
